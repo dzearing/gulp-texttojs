@@ -1,0 +1,27 @@
+{
+  "name": "gulp-texttojs",
+  "version": "1.0.1",
+  "description": "Compiles text files into javascript files.",
+  "license": "MIT",
+  "repository": "dzearing/gulp-texttojs",
+  "author": {
+    "name": "David Zearing",
+    "email": "dzearing@hotmail.com",
+    "url": "http://github.com/dzearing"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "node.extend": "^1.0.10",
+    "through2": "^0.4.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.6.0"
+  }
+}
