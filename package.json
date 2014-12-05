@@ -1,6 +1,6 @@
 {
   "name": "gulp-texttojs",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Compiles text files into javascript files.",
   "license": "MIT",
   "repository": "dzearing/gulp-texttojs",
