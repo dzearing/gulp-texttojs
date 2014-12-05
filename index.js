@@ -9,6 +9,7 @@ module.exports = function(options) {
 
   options = extend({
     template: 'define([], function() { return <%= content %>; });',
+    ext: '.js'
   }, options);
 
   var stream = through.obj(function(file, enc, callback) {
@@ -23,7 +24,7 @@ console.log('stream' + file.path);
     try {
       var fileContent = file.contents.toString('utf8');
 
-      file.path += '.js';
+      file.path += options.ext;
       file.contents = new Buffer(_.template(options.template, { content: JSON.stringify(fileContent) }));      
     }
     catch (e) { console.log('error: ' + e); }
