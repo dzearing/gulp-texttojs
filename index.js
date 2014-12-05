@@ -19,7 +19,6 @@ module.exports = function(options) {
       callback();
       return;
     }
-console.log('stream' + file.path);
 
     try {
       var fileContent = file.contents.toString('utf8');
@@ -28,7 +27,6 @@ console.log('stream' + file.path);
       file.contents = new Buffer(_.template(options.template, { content: JSON.stringify(fileContent) }));      
     }
     catch (e) { console.log('error: ' + e); }
-    console.log(file.path + ' converted');
 
     this.push(file);
     callback();
