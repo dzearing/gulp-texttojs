@@ -1,5 +1,5 @@
 # [gulp](https://github.com/gulpjs/gulp)-texttojs
-> Compiles text files into JavaScript.
+> Converts text files into JavaScript.
 
 ## Install
 
