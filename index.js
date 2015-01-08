@@ -24,7 +24,7 @@ module.exports = function(options) {
       var fileContent = file.contents.toString('utf8');
 
       file.path += options.ext;
-      file.contents = new Buffer(_.template(options.template, { content: JSON.stringify(fileContent) }));      
+      file.contents = new Buffer(_.template(typeof options.template === 'function' ? options.template(file) : options.template, { content: JSON.stringify(fileContent) }));
     }
     catch (e) { console.log('error: ' + e); }
 

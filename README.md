@@ -12,7 +12,7 @@ $ npm install --save-dev gulp-texttojs
 ## Description
 
 Converts a text file (css, html, etc) into a javascript file, which by default is exported as an amd module, but
-can be tweaked to do anything you want with the file as a javscript string.
+can be tweaked to do anything you want with the file as a javascript string.
 
 ## Usage
 
@@ -42,10 +42,10 @@ define([], function() { return "Hello, \"world!\""; });
 ### texttojs(options)
 
 #### options.template
-Type: `String`
+Type: `String` or `Function`
 Default: `define([], function() { return <%= content %>; });`
 
-You can use <%= content %> to place the text file string content. By default the file is converted into an AMD export.
+You can use <%= content %> to place the text file string content. By default the file is converted into an AMD export. The function will be passed the current stream file object and is expected to return the template string.
 
 #### options.ext
 Type: 'String'
